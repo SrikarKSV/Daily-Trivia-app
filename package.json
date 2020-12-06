@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/SrikarKSV/Daily-Trivia-app#readme",
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1"
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.30.0"
   }
 }
