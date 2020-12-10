@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #ffc600;
+  --secondary-color: #000000;
+  --bc-color: #f3a82f;
+  --white: #ffffff;
+  --primary-font-family: "Poppins", sans-serif;
+  --secondary-font-family: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bc-color);
+}
