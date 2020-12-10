@@ -12,7 +12,52 @@
 </head>
 
 <body>
-  <div class="container"></div>
+  <main>
+    <section class="setup-container">
+      <div class="setup">
+        <h1>Daily Trivia</h1>
+        <div class="setup__select-levels">
+          <h2>Select levels</h2>
+          <form action="" class="setup__form">
+            <label for="category">Category</label>
+            <select name="category" id="category"></select>
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" id="difficulty">
+              <option value="">Any Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <button type="submit">Start</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="trivia-container">
+      <div class="trivia-game">
+        <h1>The following Spanish provinces are located in the northern area of Spain except:</h1>
+        <!-- <div class="progress-container">
+        <div class="progress-bar"></div>
+        <div class="circle active">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">4</div>
+      </div> -->
+        <form action="">
+          <input type="radio" name="option" id="option-1">
+          <label for="option-1">Marc Laidlaw</label>
+          <input type="radio" name="option" id="option-2">
+          <label for="option-2">Robin Walker</label>
+          <input type="radio" name="option" id="option-3">
+          <label for="option-3">Gabe Newell</label>
+          <input type="radio" name="option" id="option-4">
+          <label for="option-4">Chet Faliszek</label>
+          <button type="submit">Next</button>
+        </form>
+        <button>Restart</button>
+      </div>
+    </section>
+  </main>
   <script src="/src/js/main.js"></script>
 </body>
 

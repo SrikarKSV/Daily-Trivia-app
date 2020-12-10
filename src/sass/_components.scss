@@ -1,0 +1,22 @@
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.setup-container,
+.trivia-container {
+  height: 100vh;
+  background-color: var(--#f3a82f);
+  @include flex-center(row);
+}
+
+.setup,
+.trivia-game {
+  height: 98vh;
+  width: 98vw;
+  margin: auto;
+  background-color: var(--white);
+  @include flex-center(column);
+}
