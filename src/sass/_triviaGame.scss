@@ -5,7 +5,7 @@
 .trivia-game h1 {
   max-width: 60rem;
   text-align: center;
-  @include secondary-font(2.1rem);
+  @include secondary-font(var(--question-font-size));
   margin: 5rem 0 1.5rem;
 }
 
@@ -66,7 +66,7 @@
   gap: 4em 7em;
 
   label {
-    @include secondary-font(1.2rem);
+    @include secondary-font(var(--label-font-size));
     border: 2px solid var(--primary-color);
     padding: 0.5em 2em;
     cursor: pointer;
@@ -141,4 +141,61 @@
   font-size: 1rem;
   border-radius: var(--sm-border-radius);
   @include button(var(--primary-color), var(--white), 0.2em 1.5em);
+}
+
+// Media queries
+@media only screen and (max-width: 45.625em) {
+  // 730px
+  .trivia-game h1 {
+    max-width: 35rem;
+    --question-font-size: 1.8rem;
+    margin: 2rem 0 0.8rem;
+  }
+
+  .progress-container {
+    margin-bottom: 20px;
+  }
+
+  .trivia-options {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    label {
+      --label-font-size: 1.3rem;
+    }
+  }
+
+  .circle {
+    font-size: 0.8rem;
+  }
+
+  .next-btn {
+    font-size: 1.4rem;
+    margin: auto;
+  }
+
+  .restart-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 27.5em) {
+  // 440px
+  .trivia-game h1 {
+    max-width: 90%;
+    --question-font-size: 1.4rem;
+  }
+  .progress-container {
+    width: 15rem;
+  }
+
+  .trivia-options label {
+    --label-font-size: 1.1rem;
+  }
+
+  .next-btn {
+    font-size: 1.3rem;
+    margin: auto;
+  }
 }
