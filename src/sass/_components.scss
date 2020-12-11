@@ -15,12 +15,13 @@
   background-color: $bc-color;
   color: $color;
   padding: $padding;
+  border: none;
 }
 
 .setup-container,
 .trivia-container {
   height: 100vh;
-  background-color: var(--#f3a82f);
+  background-color: var(--bc-color);
   @include apply-flex(center, row);
 
   .setup,
