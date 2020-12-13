@@ -1,4 +1,4 @@
-const URL = "https://opentdb.com/api.php?amount=10&type=multiple";
+const URL = "https://opentdb.com/api.php?amount=5&type=multiple";
 
 async function getQuestions(category, difficulty) {
   const results = await fetchQuestions(category, difficulty);
