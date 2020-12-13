@@ -1,5 +1,11 @@
 .trivia-container {
   position: relative;
+  transition: all 0.8s ease-in-out;
+  clip-path: circle(0%);
+
+  &.expand {
+    clip-path: circle(100%);
+  }
 }
 
 .trivia-game h1 {

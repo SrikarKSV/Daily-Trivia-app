@@ -33,3 +33,30 @@
     @include apply-flex(center, column);
   }
 }
+
+.countdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  color: var(--white);
+  @include secondary-font(10rem);
+  @include apply-flex(center, row);
+  pointer-events: none;
+  display: none;
+
+  span {
+    filter: drop-shadow(2px 3px var(--black));
+    transition: all 0.3s ease-in-out;
+
+    &.go-up {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+  }
+
+  &.active {
+    display: flex;
+  }
+}
