@@ -1,0 +1,79 @@
+.trivia-won-container {
+  @include secondary-font(1rem);
+  padding: 0.5em;
+  text-align: center;
+
+  .trivia-won {
+    padding: 1em;
+    background-color: var(--white);
+  }
+
+  h1 {
+    margin-top: 1rem;
+    font-size: 4rem;
+    color: var(--green);
+  }
+
+  .final-score {
+    font-size: 2rem;
+    margin: 1.2rem 0 1.2rem;
+  }
+
+  .restart-btn {
+    position: static;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    padding-top: 0.3em;
+  }
+}
+
+.summary {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .summary__result {
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    max-width: 50vw;
+    margin: auto;
+    @include apply-flex(space-around, row);
+
+    span {
+      margin: 0.5rem 0;
+      max-width: 10rem;
+      background-color: #f0f0f0;
+      padding: 0.5em 1em;
+
+      &.correct {
+        color: var(--white);
+        background-color: var(--green);
+      }
+
+      &.incorrect {
+        color: var(--white);
+        background-color: var(--red);
+      }
+    }
+  }
+}
+
+// Media queries
+@media only screen and (max-width: 50em) {
+  // 800px
+  .summary {
+    p {
+      flex-direction: column;
+    }
+  }
+}
+
+@media only screen and (max-width: 23.75em) {
+  // 380px
+  .trivia-won-container h1 {
+    font-size: 3rem;
+  }
+}
