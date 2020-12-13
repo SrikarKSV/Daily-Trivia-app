@@ -28,7 +28,6 @@
   .trivia-game {
     height: 98vh;
     width: 99vw;
-    margin: auto;
     background-color: var(--white);
     @include apply-flex(center, column);
   }
