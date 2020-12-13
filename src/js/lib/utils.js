@@ -5,6 +5,8 @@ import {
   menuContainer,
   spanCountDown,
   selectCategoryInput,
+  circles,
+  progressBar,
 } from "./elements";
 
 export function renderCategories() {
@@ -44,4 +46,16 @@ export function startCountdown() {
       countDownContainer.classList.remove("active");
     }
   }, 1000);
+}
+
+export function updateProgressBar() {
+  circles.forEach((circle, idx) => {
+    if (idx <= index) {
+      circle.classList.add("active");
+    }
+  });
+  const actives = document.querySelectorAll(".active");
+  progressBar.style.width = `${
+    ((actives.length - 1) / (circles.length - 1)) * 100
+  }%`;
 }
