@@ -13,7 +13,7 @@
 
 <body>
   <main>
-    <section class="setup-container">
+    <section class="setup-container" style="display: none;">
       <div class="setup">
         <h1>Daily Trivia</h1>
         <div class="setup__select-levels">
@@ -39,7 +39,7 @@
         </div>
       </div>
     </section>
-    <section class="trivia-container">
+    <section class="trivia-container" style="display: none;">
       <div class="trivia-game">
         <h1>The following Spanish provinces are located in the northern area of Spain except:</h1>
         <div class="progress-container">
@@ -77,6 +77,61 @@
     <div class="countdown">
       <span>3</span>
     </div>
+    <section class="trivia-won-container">
+      <div class="trivia-won">
+        <h1>Completed!</h1>
+        <p class="final-score">Your score: <span class="score">3</span>/5</p>
+        <div class="summary">
+          <h2>Summary:</h2>
+          <div class="summary__result">
+            <h3>What is the derivative of Acceleration with respect to time?</h3>
+            <p>
+              <span class="correct">Lorem</span>
+              <span>Shift</span>
+              <span>Bump</span>
+              <span class="incorrect">Slide</span>
+            </p>
+          </div>
+          <div class="summary__result">
+            <h3>What is the derivative of Acceleration with respect to time?</h3>
+            <p>
+              <span>Jerk</span>
+              <span class="correct">Shift</span>
+              <span class="incorrect">Bump</span>
+              <span>Slide</span>
+            </p>
+          </div>
+          <div class="summary__result">
+            <h3>What is the derivative of Acceleration with respect to time?</h3>
+            <p>
+              <span>Jerk</span>
+              <span>Shift</span>
+              <span class="correct">Bump</span>
+              <span>Slide</span>
+            </p>
+          </div>
+          <div class="summary__result">
+            <h3>What is the derivative of Acceleration with respect to time?</h3>
+            <p>
+              <span>Jerk</span>
+              <span>Shift</span>
+              <span>Bump</span>
+              <span class="correct">Slide</span>
+            </p>
+          </div>
+          <div class="summary__result">
+            <h3>What is the derivative of Acceleration with respect to time?</h3>
+            <p>
+              <span>Jerk</span>
+              <span class="incorrect">Shift</span>
+              <span>Bump</span>
+              <span class="correct">Slide</span>
+            </p>
+          </div>
+        </div>
+        <button class="restart-btn">Restart</button>
+      </div>
+    </section>
   </main>
   <script src="/src/js/main.js"></script>
 </body>
