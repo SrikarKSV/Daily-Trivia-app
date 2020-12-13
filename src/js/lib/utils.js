@@ -48,7 +48,7 @@ export function startCountdown() {
   }, 1000);
 }
 
-export function updateProgressBar() {
+export function updateProgressBar(index) {
   circles.forEach((circle, idx) => {
     if (idx <= index) {
       circle.classList.add("active");
