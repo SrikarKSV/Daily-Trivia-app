@@ -2,9 +2,11 @@ import { renderCategories, restartGame } from "./lib/utils";
 import { handleMenuSubmit } from "./triviaMenu";
 
 const gameMenuForm = document.querySelector(".setup__form");
-const restartBtn = document.querySelector(".restart-btn");
+const restartBtns = document.querySelectorAll(".restart-btn");
 
 gameMenuForm.addEventListener("submit", handleMenuSubmit);
-restartBtn.addEventListener("click", restartGame);
+restartBtns.forEach((restartBtn) => {
+  restartBtn.addEventListener("click", restartGame);
+});
 
 renderCategories();
