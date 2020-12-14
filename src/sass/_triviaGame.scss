@@ -68,7 +68,7 @@
 .trivia-options {
   display: grid;
   grid-template-columns: repeat(2, 300px);
-  justify-items: center;
+  place-items: center;
   gap: 4em 7em;
 
   label {
@@ -79,6 +79,8 @@
     position: relative;
     overflow: hidden;
     display: inline-block;
+    line-height: 1.5rem;
+    text-align: center;
     z-index: 1;
     --scale: 1;
 
@@ -97,7 +99,7 @@
     }
 
     &:hover::before {
-      --scale: 25;
+      --scale: 35;
     }
   }
 
