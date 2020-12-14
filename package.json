@@ -22,7 +22,14 @@
   },
   "homepage": "https://github.com/SrikarKSV/Daily-Trivia-app#readme",
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.4",
+    "regenerator-runtime": "^0.13.7",
     "sass": "^1.30.0"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "not dead",
+    "last 4 versions"
+  ]
 }
