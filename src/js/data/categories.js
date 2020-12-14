@@ -12,7 +12,7 @@ const categories = [
     name: "Entertainment: Film",
   },
   {
-    id: 2,
+    id: 12,
     name: "Entertainment: Music",
   },
   {
