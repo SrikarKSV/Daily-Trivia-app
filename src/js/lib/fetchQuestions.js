@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime";
 const URL = "https://opentdb.com/api.php?amount=5&type=multiple";
 
 async function getQuestions(category, difficulty) {
