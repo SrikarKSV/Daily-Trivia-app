@@ -42,7 +42,32 @@
 .summary {
   h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .color-code-info {
+    width: 40%;
+    margin: auto;
+    @include apply-flex(space-around, row);
+    margin-bottom: 0.5rem;
+
+    div {
+      @include apply-flex(center, row);
+    }
+
+    span {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin: 10px;
+      &.correct {
+        background-color: var(--green);
+      }
+
+      &.incorrect {
+        background-color: var(--red);
+      }
+    }
   }
 
   .summary__result {
