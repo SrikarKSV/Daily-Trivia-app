@@ -12,3 +12,4 @@ export const progressBar = document.querySelector(".progress-bar");
 export const gameWinContainer = document.querySelector(".trivia-won-container");
 export const scoreSpan = document.querySelector(".score");
 export const summary = document.querySelector(".summary__report");
+export const loadingAnimation = document.querySelector(".loading-animation");
