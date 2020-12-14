@@ -20,6 +20,7 @@ function generateReport(mcqChosenIndex, triviaQuestions) {
             )}
         </p>
         </div>
+        <hr/>
     `;
   });
   return html;
