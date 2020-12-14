@@ -27,3 +27,22 @@ body {
   font-family: var(--primary-font-family);
   line-height: 2.5rem;
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--black) var(--bc-color);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 6px;
+  border: 3px solid var(--bc-color);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bc-color);
+}
