@@ -5,6 +5,7 @@ import {
   labelChoicesEls,
   inputChoicesEls,
   nextBtn,
+  gameWinContainer,
 } from "./lib/elements";
 import { startCountdown, updateProgressBar } from "./lib/utils";
 
@@ -52,8 +53,8 @@ function checkAnswer(e) {
 function loadNextQuestion(chosenIndex) {
   if (index % 5 === 0) {
     // Showing the WIN screen
-    gameContainer.innerHTML = `<h1>You won!!</h1><p>Your score: ${score}</p>`;
-    console.log("YES");
+    gameWinContainer.classList.add("active");
+    return;
   }
   const { correctAnswer } = triviaQuestions[index % 5];
   if (correctAnswer === chosenIndex) {
