@@ -30,6 +30,6 @@
   "browserslist": [
     "> 1%",
     "not dead",
-    "last 4 versions"
+    "last 2 versions"
   ]
 }
