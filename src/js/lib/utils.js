@@ -46,12 +46,12 @@ export function startCountdown() {
   let count = 3;
   const countDownInterval = setInterval(() => {
     // Fading the countdown
-    spanCountDown.classList.add("go-up");
+    spanCountDown.classList.add("fade-out");
     spanCountDown.addEventListener(
       "transitionend",
       () => {
         spanCountDown.innerText = --count;
-        spanCountDown.classList.remove("go-up");
+        spanCountDown.classList.remove("fade-out");
       },
       { once: true }
     );
@@ -59,7 +59,7 @@ export function startCountdown() {
       clearInterval(countDownInterval);
       // Resetting the countdown for restart
       spanCountDown.innerText = 3;
-      spanCountDown.classList.remove("go-up");
+      spanCountDown.classList.remove("fade-out");
       countDownContainer.classList.remove("active");
     }
   }, 1000);
