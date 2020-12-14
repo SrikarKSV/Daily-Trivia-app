@@ -7,6 +7,8 @@ import {
   selectCategoryInput,
   circles,
   progressBar,
+  gameWinContainer,
+  inputChoicesEls,
 } from "./elements";
 
 export function renderCategories() {
@@ -19,8 +21,19 @@ export function renderCategories() {
 
 export function restartGame() {
   menuContainer.classList.toggle("not-active");
+  // Resetting all the sequence after menu is fully open
   setTimeout(() => {
     gameContainer.classList.remove("expand");
+    gameWinContainer.classList.remove("active");
+    circles.forEach((circle, index) => {
+      if (index > 0) {
+        circle.classList.remove("active");
+      }
+    });
+    inputChoicesEls.forEach((inputChoicesEl) => {
+      inputChoicesEl.checked = false;
+    });
+    progressBar.style.width = 0;
   }, 500);
 }
 
