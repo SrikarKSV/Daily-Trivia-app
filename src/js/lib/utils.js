@@ -9,6 +9,7 @@ import {
   progressBar,
   gameWinContainer,
   inputChoicesEls,
+  nextBtn,
 } from "./elements";
 
 export function renderCategories() {
@@ -27,6 +28,7 @@ export function restartGame() {
     () => {
       gameContainer.classList.remove("expand");
       gameWinContainer.classList.remove("active");
+      nextBtn.innerHTML = "Next";
       circles.forEach((circle, index) => {
         if (index > 0) {
           circle.classList.remove("active");
