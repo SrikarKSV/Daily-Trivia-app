@@ -8,12 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@300;400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./src/sass/main.scss">
+  <link rel="shortcut icon" href="./src/assets/favicon.svg" type="image/x-icon">
   <title>Daily Trivia</title>
 </head>
 
 <body>
   <main>
-    <section class="setup-container" style="display: none;">
+    <section class="setup-container">
       <div class="setup">
         <h1>Daily Trivia</h1>
         <div class="setup__select-levels">
@@ -39,9 +40,9 @@
         </div>
       </div>
     </section>
-    <section class="trivia-container" style="display: none;">
+    <section class="trivia-container">
       <div class="trivia-game">
-        <h1>The following Spanish provinces are located in the northern area of Spain except:</h1>
+        <h1></h1>
         <div class="progress-container">
           <div class="progress-bar"></div>
           <div class="circle active">1</div>
@@ -54,19 +55,19 @@
           <div class="trivia-options">
             <div>
               <input type="radio" name="option" id="option-1">
-              <label for="option-1">Marc Laidlaw</label>
+              <label for="option-1"></label>
             </div>
             <div>
               <input type="radio" name="option" id="option-2">
-              <label for="option-2">Robin Walker</label>
+              <label for="option-2"></label>
             </div>
             <div>
               <input type="radio" name="option" id="option-3">
-              <label for="option-3">Gabe Newell</label>
+              <label for="option-3"></label>
             </div>
             <div>
               <input type="radio" name="option" id="option-4">
-              <label for="option-4">Chet Faliszek</label>
+              <label for="option-4"></label>
             </div>
           </div>
           <button type="submit" class="next-btn">Next</button>
@@ -83,51 +84,7 @@
         <p class="final-score">Your score: <span class="score">3</span>/5</p>
         <div class="summary">
           <h2>Summary:</h2>
-          <div class="summary__result">
-            <h3>What is the derivative of Acceleration with respect to time?</h3>
-            <p>
-              <span class="correct">Lorem</span>
-              <span>Shift</span>
-              <span>Bump</span>
-              <span class="incorrect">Slide</span>
-            </p>
-          </div>
-          <div class="summary__result">
-            <h3>What is the derivative of Acceleration with respect to time?</h3>
-            <p>
-              <span>Jerk</span>
-              <span class="correct">Shift</span>
-              <span class="incorrect">Bump</span>
-              <span>Slide</span>
-            </p>
-          </div>
-          <div class="summary__result">
-            <h3>What is the derivative of Acceleration with respect to time?</h3>
-            <p>
-              <span>Jerk</span>
-              <span>Shift</span>
-              <span class="correct">Bump</span>
-              <span>Slide</span>
-            </p>
-          </div>
-          <div class="summary__result">
-            <h3>What is the derivative of Acceleration with respect to time?</h3>
-            <p>
-              <span>Jerk</span>
-              <span>Shift</span>
-              <span>Bump</span>
-              <span class="correct">Slide</span>
-            </p>
-          </div>
-          <div class="summary__result">
-            <h3>What is the derivative of Acceleration with respect to time?</h3>
-            <p>
-              <span>Jerk</span>
-              <span class="incorrect">Shift</span>
-              <span>Bump</span>
-              <span class="correct">Slide</span>
-            </p>
-          </div>
+          <div class="summary__report"></div>
         </div>
         <button class="restart-btn">Restart</button>
       </div>
