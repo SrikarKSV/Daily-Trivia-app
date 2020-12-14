@@ -6,6 +6,32 @@
   &.expand {
     clip-path: circle(100%);
   }
+
+  label,
+  .no-option-chosen {
+    line-height: 1.5rem;
+  }
+
+  .no-option-chosen {
+    font-size: 1.2rem;
+    --translateY: -250%;
+    --rotate: 0deg;
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateY(var(--translateY)) translateX(-50%)
+      rotate(var(--rotate));
+    padding: 0.4em;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: var(--sm-border-radius);
+
+    &.active {
+      --translateY: 0;
+    }
+  }
 }
 
 .trivia-game {
@@ -89,7 +115,6 @@
     position: relative;
     overflow: hidden;
     display: inline-block;
-    line-height: 1.5rem;
     text-align: center;
     z-index: 1;
     transition: all 0.3s ease-in-out;

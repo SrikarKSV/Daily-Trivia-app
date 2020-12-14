@@ -10,6 +10,7 @@ import {
   gameWinContainer,
   inputChoicesEls,
   nextBtn,
+  noOptionChosen,
 } from "./elements";
 
 export function renderCategories() {
@@ -65,6 +66,14 @@ export function startCountdown() {
       countDownContainer.classList.remove("active");
     }
   }, 1000);
+}
+
+export function chooseAnOption() {
+  noOptionChosen.classList.add("active");
+
+  setTimeout(() => {
+    noOptionChosen.classList.remove("active");
+  }, 2000);
 }
 
 export function updateProgressBar(index) {
