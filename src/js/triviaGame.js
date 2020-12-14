@@ -7,7 +7,7 @@ import {
   nextBtn,
   gameWinContainer,
 } from "./lib/elements";
-import { startCountdown, updateProgressBar } from "./lib/utils";
+import { startCountdown, updateProgressBar, chooseAnOption } from "./lib/utils";
 import { winScreen } from "./triviaWon";
 
 nextBtn.addEventListener("click", checkAnswer);
@@ -45,7 +45,7 @@ function checkAnswer(e) {
     (inputChoicesEl) => inputChoicesEl.checked
   );
   if (chosenIndex === -1) {
-    console.log("CHOOSE SOMETHING!!");
+    chooseAnOption();
   } else {
     // Pushing the player chosen mcq
     mcqChosenIndex.push(chosenIndex);
