@@ -71,11 +71,30 @@ function loadNextQuestion(chosenIndex) {
 
 function nextQuestion(chosenIndex, index) {
   const { question, mcqs } = triviaQuestions[index];
-  questionEl.innerHTML = question;
-  labelChoicesEls.forEach((choicesEl, index) => {
-    choicesEl.innerHTML = mcqs[index];
+
+  // Adding fade-out to replace content
+  questionEl.classList.add("fade-out");
+  labelChoicesEls.forEach((choicesEl) => {
+    choicesEl.classList.add("fade-out");
   });
-  inputChoicesEls[chosenIndex].checked = false;
+
+  questionEl.addEventListener(
+    "transitionend",
+    () => {
+      questionEl.innerHTML = question;
+      labelChoicesEls.forEach((choicesEl, index) => {
+        choicesEl.innerHTML = mcqs[index];
+      });
+      inputChoicesEls[chosenIndex].checked = false;
+
+      // Removing fade-out after content is replaced
+      questionEl.classList.remove("fade-out");
+      labelChoicesEls.forEach((choicesEl) => {
+        choicesEl.classList.remove("fade-out");
+      });
+    },
+    { once: true }
+  );
 
   // Update progress bar
   updateProgressBar(index);
