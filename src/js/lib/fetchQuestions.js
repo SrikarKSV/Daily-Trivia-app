@@ -10,12 +10,10 @@ async function getQuestions(category, difficulty) {
       correctAnswer: mcqs.randomIndex,
     };
   });
-
   return qna;
 }
 
 async function fetchQuestions(category, difficulty) {
-  console.log(`${URL}&category=${category}&difficulty=${difficulty}`);
   const response = await fetch(
     `${URL}&category=${category}&difficulty=${difficulty}`
   );
