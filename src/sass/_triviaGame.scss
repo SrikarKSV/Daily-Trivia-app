@@ -10,7 +10,8 @@
 
 .trivia-game {
   h1.fade-out,
-  label.fade-out {
+  label.fade-out,
+  .next-btn.fade-out {
     transform: translateY(-20%);
     opacity: 0;
   }
@@ -146,6 +147,7 @@
   @include button(var(--black), var(--white), 0.15em 1.5em);
   border-radius: var(--md-border-radius);
   margin-top: 3rem;
+  transition: all 0.3s ease-in-out;
 
   &:focus {
     outline: 2px solid var(--secondary-color);

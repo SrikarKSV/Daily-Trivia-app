@@ -77,6 +77,9 @@ function nextQuestion(chosenIndex, index) {
   labelChoicesEls.forEach((choicesEl) => {
     choicesEl.classList.add("fade-out");
   });
+  if (index === 4) {
+    nextBtn.classList.add("fade-out");
+  }
 
   questionEl.addEventListener(
     "transitionend",
@@ -86,12 +89,16 @@ function nextQuestion(chosenIndex, index) {
         choicesEl.innerHTML = mcqs[index];
       });
       inputChoicesEls[chosenIndex].checked = false;
+      if (index === 4) {
+        nextBtn.innerHTML = "Done!";
+      }
 
       // Removing fade-out after content is replaced
       questionEl.classList.remove("fade-out");
       labelChoicesEls.forEach((choicesEl) => {
         choicesEl.classList.remove("fade-out");
       });
+      nextBtn.classList.remove("fade-out");
     },
     { once: true }
   );
