@@ -144,6 +144,22 @@
   }
 }
 
+footer {
+  @include apply-flex(space-around, row);
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  transform: translateX(-4%);
+  width: 18rem;
+  font-size: 1.1rem;
+
+  img {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+  }
+}
+
 // Media qeuries
 @media only screen and (max-width: 38.75em) {
   // 620px
@@ -175,5 +191,13 @@
     label {
       font-size: 1.3rem;
     }
+  }
+}
+
+@media only screen and (max-width: 18.75em) {
+  // 300px
+  footer {
+    width: 15rem;
+    font-size: 1rem;
   }
 }
